@@ -3,6 +3,7 @@ const sections = document.querySelectorAll('.section');
 const navItems = document.querySelectorAll('.nav-item');
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const leftColumn = document.querySelector('.left-column');
+const rightColumn = document.querySelector('.right-column');
 const cvDownloadBtn = document.getElementById('cv-download');
 
 // Show specific section with animation
@@ -86,7 +87,7 @@ function setupCVDownload() {
             
             // Add loading indicator
             const originalText = cvDownloadBtn.innerHTML;
-            cvDownloadBtn.innerHTML = '<i class="lucide-loader lucide-spin"></i> Generating PDF...';
+            cvDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
             cvDownloadBtn.disabled = true;
             
             try {
@@ -212,7 +213,7 @@ function addLoadingStyles() {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        .lucide-spin {
+        .fa-spin {
             animation: spin 1s linear infinite;
         }
         button:disabled {
