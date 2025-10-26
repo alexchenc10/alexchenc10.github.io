@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng Chen - Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <!-- Lucide Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/lucide.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Navigation (Fixed Nav-Hub) -->
+        <aside class="left-column">
+            <div class="nav-hub">
+                <div class="profile">
+                    <h1>Cheng Chen</h1>
+                    <p class="subtitle">Researcher, Tongji University</p>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li class="nav-item active" data-section="about">
+                            <a href="#about"><span class="nav-icon"><i class="lucide-user"></i></span> About</a>
+                        </li>
+                        <li class="nav-item" data-section="research">
+                            <a href="#research"><span class="nav-icon"><i class="lucide-book"></i></span> Research</a>
+                        </li>
+                        <li class="nav-item" data-section="projects">
+                            <a href="#projects"><span class="nav-icon"><i class="lucide-code"></i></span> Projects & Honors</a>
+                        </li>
+                        <li class="nav-item" data-section="contact">
+                            <a href="#contact"><span class="nav-icon"><i class="lucide-mail"></i></span> Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/ceasonen" class="social-link" target="_blank" title="GitHub">
+                    <i class="lucide-github"></i>
+                </a>
+                <a href="#" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="lucide-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" target="_blank" title="Google Scholar">
+                    <i class="lucide-graduation-cap"></i>
+                </a>
+                <a href="mailto:example@gmail.com" class="social-link" title="Email">
+                    <i class="lucide-mail"></i>
+                </a>
+                <a href="mailto:example@tongji.edu.cn" class="social-link" title="Tongji Email">
+                    <i class="lucide-at-sign"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Right Content Pane (Scrollable SPA Sections) -->
+        <main class="right-column">
+            <!-- About Section -->
+            <section id="about" class="section active">
+                <div class="card">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <p>I am an undergraduate researcher at Tongji University with a strong foundation in both theoretical understanding and practical implementation. My research interests focus on the intersection of artificial intelligence, wireless communications, and signal processing. I am particularly passionate about developing intelligent, adaptive systems that can optimize themselves in real-time environments.</p>
+                        <p>With experience in both theoretical research and hands-on implementation, I aim to contribute to next-generation communication technologies that leverage machine learning and deep learning techniques to solve complex challenges in 5G/6G networks and beyond.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="section-subtitle">Key Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">PyTorch</span>
+                        <span class="skill-pill">TensorFlow</span>
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill">MATLAB</span>
+                        <span class="skill-pill">Deep Learning</span>
+                        <span class="skill-pill">Wireless Comms</span>
+                        <span class="skill-pill">Simulation (NS-3)</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="cta-container">
+                        <a href="#" class="cv-button" id="cv-download">
+                            <i class="lucide-file-text"></i> Download Curriculum Vitae (CV)
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="section">
+                <h2 class="section-title">Research & Publications</h2>
+                
+                <div class="card publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Federated Reinforcement Learning for Dynamic Spectrum Access in 6G Networks</h3>
+                        <div class="publication-authors">Cheng Chen, [Co-author Name], Prof. [Advisor Name]</div>
+                        <div class="publication-venue">IEEE ICC 2026 (Submitted)</div>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>This paper proposes a novel federated reinforcement learning approach for dynamic spectrum access in 6G networks. Our method enables intelligent resource allocation while preserving privacy across distributed nodes.</p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link" title="Abstract"><i class="lucide-file-text"></i></a>
+                        <a href="#" class="pub-link" title="PDF/arXiv"><i class="lucide-download"></i></a>
+                        <a href="#" class="pub-link" title="GitHub"><i class="lucide-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Deep Learning for Channel Estimation in Massive MIMO Systems</h3>
+                        <div class="publication-authors">Cheng Chen, [Co-author Name], Prof. [Advisor Name]</div>
+                        <div class="publication-venue">IEEE TWC 2025 (Under Review)</div>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>This research introduces a new deep learning architecture for channel estimation in massive MIMO systems, achieving significant performance improvements over traditional methods in high-mobility scenarios.</p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link" title="Abstract"><i class="lucide-file-text"></i></a>
+                        <a href="#" class="pub-link" title="PDF/arXiv"><i class="lucide-download"></i></a>
+                        <a href="#" class="pub-link" title="GitHub"><i class="lucide-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card publication-card">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Intelligent Signal Processing for Wireless Communications</h3>
+                        <div class="publication-authors">Cheng Chen, [Co-author Name], Prof. [Advisor Name]</div>
+                        <div class="publication-venue">IJCAI (CCF-A)</div>
+                    </div>
+                    <div class="publication-abstract">
+                        <p>This paper presents an intelligent signal processing framework that leverages AI techniques to enhance wireless communication systems in challenging propagation environments.</p>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="pub-link" title="Abstract"><i class="lucide-file-text"></i></a>
+                        <a href="#" class="pub-link" title="PDF/arXiv"><i class="lucide-download"></i></a>
+                        <a href="#" class="pub-link" title="GitHub"><i class="lucide-github"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects & Honors Section -->
+            <section id="projects" class="section">
+                <h2 class="section-title">Projects & Honors</h2>
+                
+                <div class="card">
+                    <h3 class="section-subtitle">Projects & Competitions</h3>
+                    
+                    <div class="project-card">
+                        <h4 class="project-title">Kaggle Signal Classification Challenge</h4>
+                        <div class="project-achievement">Achieved Top 5% globally</div>
+                        <p class="project-description">Developed a deep learning model for classifying wireless signals in noisy environments using convolutional neural networks and transfer learning techniques.</p>
+                        <a href="#" class="project-link" title="GitHub Repository"><i class="lucide-github"></i> GitHub Repository</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4 class="project-title">CUMCM (China Undergraduate Mathematical Contest in Modeling)</h4>
+                        <div class="project-achievement">National Second Prize</div>
+                        <p class="project-description">Applied mathematical modeling and optimization techniques to solve complex real-world problems in communication networks.</p>
+                        <a href="#" class="project-link" title="GitHub Repository"><i class="lucide-github"></i> GitHub Repository</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4 class="project-title">AICOM (Artificial Intelligence Competition)</h4>
+                        <div class="project-achievement">Regional Finalist</div>
+                        <p class="project-description">Designed and implemented an AI system for intelligent resource management in communication networks.</p>
+                        <a href="#" class="project-link" title="GitHub Repository"><i class="lucide-github"></i> GitHub Repository</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="section-subtitle">Academic Honors</h3>
+                    <ul class="honors-list">
+                        <li class="honor-item">
+                            <i class="lucide-award"></i>
+                            <div>
+                                <span class="honor-name">National Scholarship</span>
+                                <span class="honor-year">2024-2025</span>
+                            </div>
+                        </li>
+                        <li class="honor-item">
+                            <i class="lucide-award"></i>
+                            <div>
+                                <span class="honor-name">Outstanding Student Research Award</span>
+                                <span class="honor-year">Tongji University, 2023</span>
+                            </div>
+                        </li>
+                        <li class="honor-item">
+                            <i class="lucide-award"></i>
+                            <div>
+                                <span class="honor-name">Academic Excellence Award</span>
+                                <span class="honor-year">Tongji University, 2023-2024</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact</h2>
+                
+                <div class="card">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="lucide-github"></i>
+                            <span>GitHub: <a href="https://github.com/ceasonen" target="_blank">ceasonen</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="lucide-linkedin"></i>
+                            <span>LinkedIn: <a href="#" target="_blank">Cheng Chen</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="lucide-graduation-cap"></i>
+                            <span>Google Scholar: <a href="#" target="_blank">Cheng Chen</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="lucide-mail"></i>
+                            <span>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="lucide-at-sign"></i>
+                            <span>Tongji Email: <a href="mailto:example@tongji.edu.cn">example@tongji.edu.cn</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="lucide-menu"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
