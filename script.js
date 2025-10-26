@@ -43,9 +43,14 @@ function showSection(sectionId) {
 // Handle navigation clicks
 navItems.forEach(item => {
     item.addEventListener('click', (e) => {
-        e.preventDefault();
         const sectionId = item.getAttribute('data-section');
-        showSection(sectionId);
+        
+        // Only prevent default and show section if data-section attribute exists
+        // This allows external links like CV to work normally
+        if (sectionId) {
+            e.preventDefault();
+            showSection(sectionId);
+        }
     });
 });
 
