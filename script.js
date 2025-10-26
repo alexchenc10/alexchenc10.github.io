@@ -18,9 +18,14 @@ function showSection(sectionId) {
         item.classList.remove('active');
     });
     
-    // Show selected section with GSAP animation
+    // Show selected section with GSAP animation only if section exists
     const targetSection = document.getElementById(sectionId);
-    targetSection.classList.add('active');
+    if (targetSection) {
+        targetSection.classList.add('active');
+    } else {
+        console.warn(`Section with id '${sectionId}' not found`);
+        return;
+    }
     
     // Highlight active nav item
     const activeNavItem = document.querySelector(`.nav-item[data-section="${sectionId}"]`);
