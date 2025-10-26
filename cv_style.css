@@ -1,0 +1,266 @@
+/* CV Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 210mm;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-container {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3498db;
+}
+
+.degree-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Research Section */
+.research-item {
+    margin-bottom: 25px;
+}
+
+.research-focus {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Publications */
+.publication-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.publication-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.publication-venue {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.publication-description {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* Projects */
+.project-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    border-left: 4px solid #2ecc71;
+}
+
+.project-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.project-achievement {
+    font-weight: 500;
+    color: #2ecc71;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-item {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-item::before {
+    content: '•';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+/* Achievements */
+.achievement-item {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.achievement-item::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+}
+
+/* Languages & Interests */
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills-grid, .section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Enhancements */
+.degree-year {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+.gpa {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

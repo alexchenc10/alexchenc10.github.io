@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng Chen - CV</title>
+    <link rel="stylesheet" href="cv_style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Navigation Bar */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-link {
+            margin: 0 20px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #3498db;
+        }
+        
+        /* Print Button */
+        .print-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .print-button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }
+        
+        /* Section Header Styling */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .section-icon {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        /* Print styles */
+        @media print {
+            .nav-bar, .print-button, .back-to-top {
+                display: none !important;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+        
+        /* Container padding adjustment for fixed navbar */
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Portfolio</a>
+        <a href="cv.html" class="nav-link active"><i class="fas fa-file-alt"></i> CV</a>
+        <a href="#" class="nav-link" id="print-button">
+            <i class="fas fa-print"></i> Print CV
+        </a>
+    </div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Cheng Chen</h1>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:chenceason10@gmail.com">chenceason10@gmail.com</a> | <a href="mailto:2351445@tongji.edu.cn">2351445@tongji.edu.cn</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Shanghai, China</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <span>Tongji University</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span><a href="https://www.linkedin.com/in/cheng-chen-012a83378/" target="_blank">linkedin.com/in/cheng-chen-012a83378</a></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Education Section -->
+        <section id="education">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap fa-2x section-icon"></i>
+                <h2>Education</h2>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree-info">
+                    <h3>Tongji University, Shanghai</h3>
+                    <span class="degree-year">2023 - Present</span>
+                </div>
+                <p><strong>B.S. in Communication Engineering</strong> | <span class="gpa">GPA: 92/100</span></p>
+                <p>High-achieving undergraduate with strong foundation in both theoretical understanding and practical implementation. Originally Computer Science; currently pursuing coursework aligned with Communication Engineering after an attempted major transfer.</p>
+            </div>
+        </section>
+        
+        <!-- Research Experience Section -->
+        <section id="research">
+            <div class="section-header">
+                <i class="fas fa-flask fa-2x section-icon"></i>
+                <h2>Research Experience</h2>
+            </div>
+            
+            <div class="research-item">
+                <h3>Undergraduate Researcher</h3>
+                <p class="degree-year">Tongji University | 2023 - Present</p>
+                <p class="research-focus">Research Focus: Intersection of artificial intelligence, wireless communications, and signal processing</p>
+                <ul class="skill-list">
+                    <li class="skill-item">Conducting cutting-edge research at the intersection of communication engineering, hardware engineering, and applied algorithm design</li>
+                    <li class="skill-item">Developing intelligent, adaptive systems that can optimize themselves in real-time environments</li>
+                    <li class="skill-item">Contributing to next-generation 5G/6G communication technologies leveraging machine learning and deep learning techniques</li>
+                    <li class="skill-item">Collaborating with faculty members on research publications and project development</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Publications Section -->
+        <section id="publications">
+            <div class="section-header">
+                <i class="fas fa-scroll fa-2x section-icon"></i>
+                <h2>Publications & Conferences</h2>
+            </div>
+            
+            <h3>Journal Publications</h3>
+            <div class="publication-item">
+                <p class="publication-title">"Intelligent Signal Processing for Wireless Communications"</p>
+                <p class="publication-venue">IJCAI (CCF-A)</p>
+                <p class="publication-description">Developed an intelligent signal processing framework leveraging AI techniques for enhancing wireless communication systems.</p>
+            </div>
+            
+            <div class="publication-item">
+                <p class="publication-title">"Deep Learning for Channel Estimation in Massive MIMO Systems"</p>
+                <p class="publication-venue">IEEE TWC 2025 (Under Review)</p>
+                <p class="publication-description">Introduced a novel deep learning architecture for channel estimation in massive MIMO systems.</p>
+            </div>
+            
+            <h3>Conference Papers</h3>
+            <div class="publication-item">
+                <p class="publication-title">"Federated Reinforcement Learning for Dynamic Spectrum Access in 6G Networks"</p>
+                <p class="publication-venue">IEEE ICC 2026 (Submitted)</p>
+                <p class="publication-description">Proposed a novel federated reinforcement learning approach for dynamic spectrum access in 6G networks.</p>
+            </div>
+        </section>
+        
+        <!-- Projects & Competitions Section -->
+        <section id="projects">
+            <div class="section-header">
+                <i class="fas fa-project-diagram fa-2x section-icon"></i>
+                <h2>Projects & Competitions</h2>
+            </div>
+            
+            <div class="project-item">
+                <p class="project-title">Kaggle Signal Classification Challenge</p>
+                <p class="project-achievement">Achievement: Top 5% globally</p>
+                <ul class="skill-list">
+                    <li class="skill-item">Developed a deep learning model for classifying wireless signals in noisy environments</li>
+                    <li class="skill-item">Applied convolutional neural networks and transfer learning techniques</li>
+                    <li class="skill-item">Implemented advanced data preprocessing and augmentation strategies</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <p class="project-title">CUMCM (China Undergraduate Mathematical Contest in Modeling)</p>
+                <p class="project-achievement">Achievement: National Second Prize</p>
+                <ul class="skill-list">
+                    <li class="skill-item">Applied mathematical modeling and optimization techniques to solve complex real-world problems in communication networks</li>
+                    <li class="skill-item">Led team in developing novel solution approach and implementation</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <p class="project-title">AICOM (Artificial Intelligence Competition)</p>
+                <p class="project-achievement">Achievement: Regional Finalist</p>
+                <ul class="skill-list">
+                    <li class="skill-item">Designed and implemented an AI system for intelligent resource management in communication networks</li>
+                    <li class="skill-item">Demonstrated exceptional problem-solving skills in AI applications</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Technical Skills Section -->
+        <section id="skills">
+            <div class="section-header">
+                <i class="fas fa-cogs fa-2x section-icon"></i>
+                <h2>Technical Skills</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><strong>Python</strong> (Advanced): Machine learning, data analysis, simulation</li>
+                        <li class="skill-item"><strong>MATLAB</strong> (Advanced): Signal processing, wireless communication systems</li>
+                        <li class="skill-item"><strong>C++</strong> (Intermediate): Algorithm implementation, system programming</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras</li>
+                        <li class="skill-item"><strong>Signal Processing:</strong> Signal Processing Toolbox, Scipy Signal</li>
+                        <li class="skill-item"><strong>Simulation:</strong> NS-3, MATLAB Simulink, PySDR</li>
+                        <li class="skill-item"><strong>Data Analysis:</strong> NumPy, Pandas, Matplotlib, Seaborn</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Expertise</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><strong>Wireless Communications:</strong> MIMO systems, channel estimation, modulation techniques</li>
+                        <li class="skill-item"><strong>Signal Processing:</strong> Digital filtering, spectral analysis, adaptive signal processing</li>
+                        <li class="skill-item"><strong>Machine Learning:</strong> Reinforcement learning, federated learning, neural networks</li>
+                        <li class="skill-item"><strong>Deep Learning:</strong> CNNs, RNNs, autoencoders for signal processing applications</li>
+                        <li class="skill-item"><strong>Simulation & Modeling:</strong> System-level simulations, performance analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Academic Honors Section -->
+        <section id="achievements">
+            <div class="section-header">
+                <i class="fas fa-award fa-2x section-icon"></i>
+                <h2>Academic Honors & Achievements</h2>
+            </div>
+            
+            <div class="achievement-item">
+                <h3>National Scholarship for Undergraduates (2024-2025)</h3>
+                <p>Prestigious national-level scholarship recognizing academic excellence</p>
+            </div>
+            
+            <div class="achievement-item">
+                <h3>Outstanding Student Research Award (Tongji University, 2023)</h3>
+                <p>Recognition for exceptional research contributions as an undergraduate</p>
+            </div>
+            
+            <div class="achievement-item">
+                <h3>Academic Excellence Award (Tongji University, 2023-2024)</h3>
+                <p>Awarded for maintaining superior academic performance</p>
+            </div>
+            
+            <div class="achievement-item">
+                <h3>Consistent Academic Excellence</h3>
+                <p>Maintained outstanding GPA of 92/100 throughout undergraduate studies</p>
+                <p>Ranked among top 1% of students in the department</p>
+            </div>
+        </section>
+        
+        <!-- Languages & Interests Section -->
+        <section id="languages">
+            <div class="section-header">
+                <i class="fas fa-globe fa-2x section-icon"></i>
+                <h2>Languages & Interests</h2>
+            </div>
+            
+            <div class="section-grid">
+                <div>
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item"><strong>English:</strong> Professional proficiency</li>
+                        <li class="skill-item"><strong>Mandarin Chinese:</strong> Native proficiency</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Research Interests</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Next-generation wireless communication systems (5G/6G)</li>
+                        <li class="skill-item">AI/ML applications in signal processing and communications</li>
+                        <li class="skill-item">Federated and distributed learning for wireless networks</li>
+                        <li class="skill-item">Edge intelligence and real-time adaptive systems</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3>Professional Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Active participant in academic conferences and workshops</li>
+                        <li class="skill-item">Contributor to open-source software projects in communication and AI domains</li>
+                        <li class="skill-item">Continuous learning in emerging technologies and research methodologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script>
+        // Print button functionality
+        document.getElementById('print-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.print();
+        });
+        
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
